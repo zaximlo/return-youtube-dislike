@@ -68,9 +68,15 @@ const NEUTRAL_STATE = "NEUTRAL_STATE";
 
   //---   Sets The Likes And Dislikes Values   ---//
   function setLikes(likesCount) {
+    if (likesCount<1){
+      likesCount = 0;
+    }
     getButtons().children[0].querySelector("#text").innerText = likesCount;
   }
   function setDislikes(dislikesCount) {
+    if (dislikesCount<1){
+      dislikesCount = 0;
+    }
     getButtons().children[1].querySelector("#text").innerText = dislikesCount;
   }
 
